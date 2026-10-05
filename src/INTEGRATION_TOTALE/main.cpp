@@ -1,5 +1,5 @@
 #include <Arduino.h>
-
+#include "secrets.h"
 
 /////////CONFIG MESURE DE MASSE///////////////
       #include <Wire.h>
@@ -18,13 +18,12 @@
       #include <HTTPClient.h>
       unsigned long lastTime = 0;
       unsigned long timerDelay = 10000;
-      const char* ssid = "Xiaomi_routeur2_BTSSN";
-      const char* password = "BTSsnrouteur2";
+      
       
       // Domain Name with full URL Path for HTTP POST Request
       const char* serverName = "http://api.thingspeak.com/update";
       // Service API Key
-      String apiKey = "732NEOR9Q3HSP5S5";
+     
 
 
 void print_wakeup_reason(){

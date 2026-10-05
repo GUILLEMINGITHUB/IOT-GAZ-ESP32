@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "secrets.h"
 /*
   Rui Santos
   Complete project details at Complete project details at https://RandomNerdTutorials.com/esp32-http-post-ifttt-thingspeak-arduino/ 
@@ -13,13 +14,12 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-const char* ssid = "Xiaomi_routeur2_BTSSN";   // IDENTIFIANT ROUTEUR WIFI SALLE SUD
-const char* password = "BTSsnrouteur2";       // MOT DE PASSE ROUTEUR WIFI SALLE SUD
+
 
 // Domain Name with full URL Path for HTTP POST Request
 const char* serverName = "http://api.thingspeak.com/update";
 // Service API Key
-String apiKey = "732NEOR9Q3HSP5S5";  // API KEY A RECUPERER DANS THE THINGSSPEAK
+ // API KEY A RECUPERER DANS THE THINGSSPEAK
 // THE DEFAULT TIMER IS SET TO 10 SECONDS FOR TESTING PURPOSES
 // For a final application, check the API call limits per hour/minute to avoid getting blocked/banned
 unsigned long lastTime = 0;
